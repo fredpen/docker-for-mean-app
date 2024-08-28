@@ -35,7 +35,8 @@ jobs:
         key: ${{ secrets.VPS_SSH_KEY }}
         port: ${{ secrets.VPS_PORT }}
         script: |
-          cd /path/to/your/docker-compose/directory
-          docker-compose down
-          docker-compose pull
-          docker-compose up -d
+          cd /home/Docks/test
+          touch fred.php
+        #   docker-compose down
+        #   docker-compose pull
+        #   docker-compose up -d

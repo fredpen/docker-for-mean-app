@@ -23,7 +23,6 @@ services:
       - client
   api:
     build:
-      image: fredrickksola/node-app:latest
       dockerfile: Dockerfile.dev
       context: ./server
     volumes:
@@ -42,7 +41,6 @@ services:
       - postgres
   client:
     build:
-      image: fredrickksola/react-app:latest
       dockerfile: Dockerfile.dev
       context: ./client
     container_name: client
@@ -53,7 +51,6 @@ services:
       - ./client:/app
   worker:
     build:
-      image: fredrickksola/node-worker:latest
       dockerfile: Dockerfile.dev
       context: ./worker
     volumes:
